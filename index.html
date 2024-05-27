@@ -3,84 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 20px;
-        }
-        header {
-            background: #50b3a2;
-            color: #ffffff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
-        }
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header ul li {
-            display: inline;
-            padding: 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-        header .highlight, header .current a {
-            color: #e8491d;
-            font-weight: bold;
-        }
-        header a:hover {
-            color: #ffffff;
-            font-weight: bold;
-        }
-    </style>
+    <title>Academic Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div id="branding">
-                <h1><span class="highlight">Your</span> Name</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Your Academic Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#background">Background</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="container">
-        <h2>Welcome to My Website</h2>
-        <p>This is a placeholder for your own content. You can introduce yourself, your skills, and your work here.</p>
-    </section>
+    <main>
+        <section id="background">
+            <h2>Background</h2>
+            <p>Information about your academic background, degrees, and research interests.</p>
+        </section>
 
-    <footer class="container">
-        <p>© 2024 Your Name. All rights reserved.</p>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Details of your research projects, publications, and collaborations.</p>
+        </section>
+
+        <section id="highlights">
+            <h2>Highlights</h2>
+            <p>Key achievements, awards, and media mentions.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Images and videos of your research, events, or academic travels.</p>
+        </section>
+
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>Latest news, updates, and thoughts on your academic field.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Your Academic Name. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
