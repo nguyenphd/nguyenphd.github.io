@@ -1,46 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Vũ-Anh Lê</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Frangelica&family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        header {
+            background: #50b3a2;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header ul li {
+            display: inline;
+            padding: 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <div class="header-text">
-                <h1>Vũ-Anh Lê</h1>
-                <h1>黎武煐</h1>
-                <h1>MAKE SCIENCE EASIER AND MORE INTERPRETABLE</h1>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Your</span> Name</h1>
             </div>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/luffyle/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://orcid.org/0009-0000-1904-5186" target="_blank"><i class="fab fa-orcid"></i></a>
-                <a href="https://github.com/csplevuanh" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">About</a></li>
-            <li><a href="cv-resume.html">CV/Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="my-world.html">My World</a></li>
-        </ul>
-    </nav>
-    <section id="publications">
-        <h2>Publications</h2>
-        <p><strong>1. </strong>Vu, Thi Phuong Thao, Dang, Truong Giang, and Le, Vu Anh. “Reliability Assessment of Land Subsidence Monitoring Results Using PSI Technique in Ho Chi Minh City, Vietnam.” <em>International Journal of Environmental Studies 81,</em> no. 2 (March 3, 2024): 881–95. <a href="https://doi.org/10.1080/00207233.2024.2324623">[Manuscript URL]</a></p>
-        <p><strong>2. </strong>Vu, Thi Phuong Thao, Le, Vu Anh, and Kalibbala, Martin. “Estimating the impact of climate change on flood-flow patterns into the Ban Chat Reservoir, Northern Vietnam.” <em>Under peer-review.</em> <a href="https://drive.google.com/file/d/1gezGbBjB9pyk7xDOim47iWw2oOaXGAAp/view?usp=sharing">[Manuscript URL]</a></p>
-        <p><strong>3. </strong>Le, Vu Anh, Zoro, David, Waggoner, Mike, and Ortiz, Christine. “Life Cycle Assessment of Biodegradable Plastic Packaging Subject to Comprehensive Organic Sorting.” <em>Article manuscript in progress.</em> <a href="https://drive.google.com/file/d/1UuKDG_74BM4GZZIy0yz9n6WFfusYO4X4/view">[Manuscript URL]</a></p>
+
+    <section class="container">
+        <h2>Welcome to My Website</h2>
+        <p>This is a placeholder for your own content. You can introduce yourself, your skills, and your work here.</p>
     </section>
-    <footer>
-        <p>&copy; 2024 Vũ-Anh Lê. All rights reserved.</p>
+
+    <footer class="container">
+        <p>© 2024 Your Name. All rights reserved.</p>
     </footer>
 </body>
 </html>
