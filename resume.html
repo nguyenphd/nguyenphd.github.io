@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Phuong-Duy Nguyen</title>
+    <title>Academic CV - [Your Name]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Muli', sans-serif;
             margin: 0;
             padding: 20px;
             background-color: #f4f4f4;
@@ -20,18 +21,22 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .header, .content {
+        .header {
             display: flex;
             flex-wrap: wrap;
-        }
-        .header > div, .content > div {
-            flex: 1;
-            padding: 10px;
-        }
-        .header {
+            align-items: center;
             border-bottom: 2px solid #333;
             padding-bottom: 20px;
             margin-bottom: 20px;
+        }
+        .header div {
+            flex: 1;
+            padding: 10px;
+        }
+        .header img {
+            border-radius: 50%;
+            max-width: 150px;
+            max-height: 150px;
         }
         h1 {
             margin: 0;
@@ -56,6 +61,14 @@
         .contact-info a:hover {
             text-decoration: underline;
         }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content > div {
+            flex: 1;
+            padding: 10px;
+        }
         @media (max-width: 768px) {
             .header, .content {
                 flex-direction: column;
@@ -67,7 +80,7 @@
     <div class="container">
         <div class="header">
             <div>
-                <h1>PHUONG-DUY NGUYEN (He/him/his)</h1>
+                <h1>PHUONG-DUY NGUYEN (he/him/his)</h1>
                 <div class="contact-info">
                     <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
                     <p>Phone: [Your Phone Number]</p>
@@ -75,6 +88,9 @@
                     <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
                     <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
                 </div>
+            </div>
+            <div>
+                <img src="https://nguyenphd.github.io/img/a23/png.webp" alt="[Your Name]">
             </div>
         </div>
 
@@ -84,13 +100,17 @@
                     <h2>Education</h2>
                     <ul>
                         <li>
-                            <strong>Master of Philosophy</strong><br>
-                            La Trobe University, Melbourne VIC, Australia (2024-2026)
+                            <strong>Ph.D. in [Your Field]</strong><br>
+                            [Your University], [Year] - [Year]<br>
+                            Dissertation: "[Title of Dissertation]"
                         </li>
                         <li>
-                            <strong>B.Sc. in Natural Resource Economics</strong><br>
-                            Can Tho University, Can Tho, Vietnam (2014-2018)
-                            B.Sc. Thesis: 'Valuing health risks related to the use of pesticides in agricultural production in Vinh Long, Vietnam using choice experiment method.'
+                            <strong>M.S. in [Your Field]</strong><br>
+                            [Your University], [Year] - [Year]
+                        </li>
+                        <li>
+                            <strong>B.S. in [Your Field]</strong><br>
+                            [Your University], [Year] - [Year]
                         </li>
                     </ul>
                 </section>
@@ -98,10 +118,9 @@
                 <section>
                     <h2>Research Interests</h2>
                     <ul>
-                        <li>Environmental Economics</li>
-                        <li>Agricultural Economics</li>
-                        <li>Urban Studies</li>
-                        <li>Valuing the Environment</li>
+                        <li>[Interest 1]</li>
+                        <li>[Interest 2]</li>
+                        <li>[Interest 3]</li>
                     </ul>
                 </section>
             </div>
@@ -111,7 +130,7 @@
                     <h2>Publications</h2>
                     <ul>
                         <li>
-                            Tong YD, Maraseni T, <b>Nguyen PD</b>, An-Vo DA, Mancuso-Tradenta J, Tran TAD (2023). "Potential for GHG emissions savings from replacing short motorcycle trips with active travel modes in Vietnam," <em>Transportation</em>, DOI:<a href="https://link.springer.com/article/10.1007/s11116-023-10394-0">10.1007/s11116-023-10394-0</a>.
+                            [Author(s)], "[Title of Paper]," <em>[Journal Name]</em>, [Volume], [Page Numbers], [Year].
                         </li>
                         <li>
                             [Author(s)], "[Title of Paper]," <em>[Conference Name]</em>, [Year].
@@ -121,7 +140,7 @@
                 </section>
 
                 <section>
-                    <h2>Professional Experience</h2>
+                    <h2>Teaching Experience</h2>
                     <ul>
                         <li>
                             <strong>[Course Title]</strong>, [Your University], [Year] - [Year]<br>
