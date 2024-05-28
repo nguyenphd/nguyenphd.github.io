@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic CV - [Your Name]</title>
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Muli', sans-serif;
@@ -34,7 +35,7 @@
             padding: 10px;
         }
         .header img {
-            border-radius: 50%;
+            border-radius: 8px;
             max-width: 150px;
             max-height: 150px;
         }
@@ -48,8 +49,8 @@
             margin-top: 20px;
         }
         ul {
-            list-style-type: none;
-            padding: 0;
+            list-style-type: disc;
+            padding-left: 20px;
         }
         li {
             margin-bottom: 10px;
@@ -57,9 +58,15 @@
         .contact-info a {
             color: #333;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
         }
         .contact-info a:hover {
             text-decoration: underline;
+        }
+        .contact-info i {
+            margin-right: 10px;
         }
         .content {
             display: flex;
@@ -80,17 +87,17 @@
     <div class="container">
         <div class="header">
             <div>
-                <h1>PHUONG-DUY NGUYEN (he/him/his)</h1>
+                <h1>[Your Name]</h1>
                 <div class="contact-info">
-                    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                    <p>Phone: [Your Phone Number]</p>
-                    <p>Website: <a href="http://yourwebsite.com">yourwebsite.com</a></p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
-                    <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+                    <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i>your.email@example.com</a>
+                    <a href="tel:+123456789"><i class="fas fa-phone"></i>[Your Phone Number]</a>
+                    <a href="http://yourwebsite.com"><i class="fas fa-globe"></i>yourwebsite.com</a>
+                    <a href="https://www.linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i>linkedin.com/in/yourprofile</a>
+                    <a href="https://github.com/yourusername"><i class="fab fa-github"></i>github.com/yourusername</a>
                 </div>
             </div>
             <div>
-                <img src="https://nguyenphd.github.io/img/a23/png.webp" alt="[Your Name]">
+                <img src="https://nguyenphd.github.io/img/a23.png.webp" alt="[Your Name]">
             </div>
         </div>
 
