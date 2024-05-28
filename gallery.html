@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gallery</h1>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://nguyenphd.github.io/img/talkshow.png" alt="Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://nguyenphd.github.io/img/sonla.jpg" alt="Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://nguyenphd.github.io/img/soctrang1.jpg" alt="Image 3">
+            </div>
+          <div class="gallery-item">
+                <img src="https://nguyenphd.github.io/img/soctrang2.jpg" alt="Image 4">
+            </div>
+             <div class="gallery-item">
+                <img src="https://nguyenphd.github.io/img/vssd1.jpg" alt="Image 5">
+            </div>
+            <!-- Add more gallery items as needed -->
+        </div>
+    </div>
+</body>
+</html>
