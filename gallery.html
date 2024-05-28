@@ -18,7 +18,7 @@
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-gap: 20px;
         }
         .gallery-item {
@@ -26,6 +26,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            cursor: pointer;
         }
         .gallery-item:hover {
             transform: scale(1.05);
@@ -35,43 +36,21 @@
             height: auto;
             display: block;
             border-radius: 8px;
-            cursor: pointer;
-        }
-        .gallery-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 9999;
-            overflow: hidden;
-        }
-        .gallery-overlay.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .gallery-overlay img {
-            max-width: 80%;
-            max-height: 80%;
         }
         .gallery-title {
-            color: #fff;
-            font-size: 24px;
-            margin-top: 20px;
+            color: #333;
+            font-size: 18px;
+            margin-top: 10px;
         }
         .back-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
+            display: block;
+            margin-top: 20px;
             background-color: #333;
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
-            z-index: 9999;
+            text-align: center;
         }
     </style>
 </head>
@@ -79,21 +58,27 @@
     <div class="container">
         <h1>Gallery</h1>
         <div class="gallery">
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="showImage('https://nguyenphd.github.io/img/talkshow.png', 'Talkshow')">
                 <img src="https://nguyenphd.github.io/img/talkshow.png" alt="Image 1">
+                <div class="gallery-title">Talkshow</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="showImage('https://nguyenphd.github.io/img/sonla.jpg', 'Son La')">
                 <img src="https://nguyenphd.github.io/img/sonla.jpg" alt="Image 2">
+                <div class="gallery-title">Son La</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="showImage('https://nguyenphd.github.io/img/soctrang1.jpg', 'Soc Trang 1')">
                 <img src="https://nguyenphd.github.io/img/soctrang1.jpg" alt="Image 3">
+                <div class="gallery-title">Soc Trang 1</div>
             </div>
-          <div class="gallery-item">
+            <div class="gallery-item" onclick="showImage('https://nguyenphd.github.io/img/soctrang2.jpg', 'Soc Trang 2')">
                 <img src="https://nguyenphd.github.io/img/soctrang2.jpg" alt="Image 4">
+                <div class="gallery-title">Soc Trang 2</div>
             </div>
-             <div class="gallery-item">
+            <div class="gallery-item" onclick="showImage('https://nguyenphd.github.io/img/vssd1.jpg', 'VSSD 1')">
                 <img src="https://nguyenphd.github.io/img/vssd1.jpg" alt="Image 5">
+                <div class="gallery-title">VSSD 1</div>
             </div>
+            <!-- Add more gallery items as needed -->
         </div>
     </div>
 
@@ -102,7 +87,7 @@
         <div class="gallery-title" id="galleryTitle"></div>
     </div>
 
-    <a href="#" class="back-button">Back to Homepage</a>
+    <a href="#" class="back-button" onclick="backToHomepage()">Back to Homepage</a>
 
     <script>
         function showImage(src, title) {
@@ -119,6 +104,10 @@
         function hideImage() {
             var overlay = document.getElementById('galleryOverlay');
             overlay.classList.remove('active');
+        }
+
+        function backToHomepage() {
+            window.location.href = 'index.html'; // Replace 'index.html' with the path to your homepage
         }
     </script>
 </body>
