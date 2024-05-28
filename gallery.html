@@ -10,16 +10,20 @@
             font-family: 'Muli', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Orion_300mm_F4_Taken_in_Tenerife_2018_Sep_SFS10015.jpg/1280px-Orion_300mm_F4_Taken_in_Tenerife_2018_Sep_SFS10015.jpg');
+            background-size: cover;
         }
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             grid-gap: 20px;
         }
         .gallery-item {
@@ -34,13 +38,14 @@
         }
         .gallery-item img {
             width: 100%;
-            height: auto;
+            height: 100%;
             display: block;
+            object-fit: cover;
             border-radius: 8px;
         }
         .gallery-title {
             color: #333;
-            font-size: 18px;
+            font-size: 16px;
             margin-top: 10px;
             text-align: center;
         }
@@ -59,7 +64,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Gallery</h1>
+        <h1 style="text-align: center;">Gallery</h1>
         <div class="gallery">
             <div class="gallery-item" onclick="showImage('https://nguyenphd.github.io/img/talkshow.png', 'Talkshow')">
                 <img src="https://nguyenphd.github.io/img/talkshow.png" alt="Image 1">
@@ -81,7 +86,6 @@
                 <img src="https://nguyenphd.github.io/img/vssd1.jpg" alt="Image 5">
                 <div class="gallery-title">VSSD 1</div>
             </div>
-            <!-- Add more gallery items as needed -->
         </div>
     </div>
 
