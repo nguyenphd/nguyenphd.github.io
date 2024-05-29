@@ -22,8 +22,8 @@
             justify-content: space-between;
         }
         .gallery-item {
-            width: calc(50% - 20px);
-            background: white;
+            width: calc(33.33% - 20px);
+            background: MediumSeaGreen;
             padding: 10px;
             margin-bottom: 20px;
             border-radius: 8px;
@@ -37,6 +37,8 @@
         .gallery-item img {
             width: 100%;
             height: auto;
+            max-width: 300px;
+            max-height: 300px;
             border-radius: 8px;
         }
         .gallery-item h3 {
@@ -81,7 +83,7 @@
             color: white;
         }
         .close {
-            position: fixed;
+            position: absolute;
             top: 15px;
             right: 35px;
             color: #fff;
@@ -94,6 +96,16 @@
             color: #bbb;
             text-decoration: none;
             cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-item {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -143,6 +155,5 @@
             document.getElementById("myModal").style.display = "none";
         }
     </script>
-    
 </body>
 </html>
