@@ -142,7 +142,8 @@
 
 
 <div class="page-header">
-<h1>All about STATA<small> &nbsp;–&nbsp; under development </small></h1>
+<h1>
+          All about STATA<small> &nbsp;–&nbsp; under development </small></h1>
 </div>
 
 <div class="row">
@@ -153,8 +154,8 @@
 <ul>
 
 <li><a href="#data">Data in use</a></li>  
-<li><a href="#graph">Graphs </a></li>
-
+<li><a href="#setting">Set up</a></li>
+<li><a href="#basic">Some basic commands</a></li>
 <li><a href="#color">Color Names</a></li>
 
 
@@ -171,7 +172,7 @@
  <p>Data used in this section is extracted from Vietnam PAPI (Public Administratation and Performance Index) website (<a href="https://papi.org.vn/du-lieu-papi/">https://papi.org.vn/</a>) in 2014-2023 period.</p>
  <p>Available here: <a href="stata/papi1423.dta">PAPI-2014to2023</a></p>
 
-<h3 id="graph">Graphs</h3>
+<h3 id="setting">Set up</h3>
 
 <p>To install the grstyle package, type:</p>
 <pre id="stlog-1" class="stlog"><samp><span class="stinp">.    ssc install grstyle, replace</span></samp></pre>
@@ -187,31 +188,54 @@
 >    grstyle yesno draw_major_hgrid yes ///
 >    grstyle yesno grid_draw_min yes ///
 >    grstyle yesno grid_draw_max yes ///
->    grstyle anglestyle vertical_tick horizontal ///
+>    grstyle anglestyle vertical_tick horizontal
 </span></samp></pre>
   
+<h3 id="basic">Some basic commands</h3>
+
+<p>To generate variable, type:</p>
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    gen var1=n ///
+.    gen var1=n if var2=="" ///
+.    gen var1=n if inlist(var2, "", "", "") /// 
+.    gen var1=1+9*[[var2-var3]/[var4-var5]]  ///
+.    bysort var1: gen rank=_n ///
+.    egen var1 = min(var2), by(var3) ///
+.    egen var1 = max(var2), by(var3)
+</span></samp></pre>
+
+<p>To label variable, type:</p>
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    label define label_name 1 "" 2 "" 3 "" ///
+>    label values var1 label_name ///
+</span></samp></pre>
+
+<p>To sort in ascending or descending order, type:</p>  
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    gsort var1 ///
+.    gsort -var1 ///
+.    gsort var1 -var2
+</span></samp></pre>
+
   
 <h3 id="color">Color Names</h3>
 
-<pre id="stlog-1" class="stlog"><samp><span class="stinp">. colorpalette s1</span></samp></pre>
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    colorpalette s1</span></samp></pre>
 <div class="grstyle-img"><img alt="stata/colors1.png" src="stata/colors1.png" width="400" height="400"  /></div>
 
-<pre id="stlog-2" class="stlog"><samp><span class="stinp">. colorpalette lin fruits</span></samp></pre>
+<pre id="stlog-2" class="stlog"><samp><span class="stinp">.    colorpalette lin fruits</span></samp></pre>
 <div class="grstyle-img"><img alt="stata/colorlin.png" src="stata/colorlin.png" width="400" height="400" /></div>
 
-<pre id="stlog-3" class="stlog"><samp><span class="stinp">. colorpalette blue bluishgray brown cranberry cyan dimgray dkgreen dknavy  ///
->     dkorange eggshell emerald forest_green gold gray green khaki lavender ///
->     lime ltblue ltbluishgray ltkhaki magenta maroon midblue midgreen mint ///
->     navy olive olive_teal orange orange_red pink purple red sand sandb    ///
->     sienna stone teal yellow ebg ebblue edkblue eltblue eltgreen emidblue ///
->     erose, title(Named colors)
+<pre id="stlog-3" class="stlog"><samp><span class="stinp">.    colorpalette blue bluishgray brown cranberry cyan dimgray dkgreen dknavy  ///
+>    dkorange eggshell emerald forest_green gold gray green khaki lavender ///
+>    lime ltblue ltbluishgray ltkhaki magenta maroon midblue midgreen mint ///
+>    navy olive olive_teal orange orange_red pink purple red sand sandb    ///
+>    sienna stone teal yellow ebg ebblue edkblue eltblue eltgreen emidblue ///
+>    erose, title(Named colors)
 </span></samp></pre>
 <div class="grstyle-img"><img alt="stata/colornamed.png" src="stata/colornamed.png" width="500" height="500" /></div>
 
-<pre id="stlog-3" class="stlog"><samp><span class="stinp">. colorpalette #bd1e24 #e97600 #f6c700 #007256 #0067a7 #964f8e ///
->     "HCL 0 100 70" "HCL 120 100 70" "HCL 240 100 70" ///
->     SlateBlue PaleVioletRed LightSeaGreen SandyBrown  ///
->     w3-purple w3-lime w3-deep-orange, title(Some other colors)
+<pre id="stlog-3" class="stlog"><samp><span class="stinp">.    colorpalette #bd1e24 #e97600 #f6c700 #007256 #0067a7 #964f8e ///
+>    "HCL 0 100 70" "HCL 120 100 70" "HCL 240 100 70" ///
+>    SlateBlue PaleVioletRed LightSeaGreen SandyBrown  ///
+>    w3-purple w3-lime w3-deep-orange, title(Some other colors)
 </span></samp></pre>
 <div class="grstyle-img"><img alt="stata/othercolors.png" src="stata/othercolors.png" width="450" height="450" /></div>
 
