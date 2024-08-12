@@ -142,7 +142,7 @@
 
 
 <div class="page-header">
-<h1>Getting started<small> &nbsp;–&nbsp; How the palettes commands work</small></h1>
+<h1>All about STATA<small> &nbsp;–&nbsp; My archive of commands used on STATA software</small></h1>
 </div>
 
 <div class="row">
@@ -151,12 +151,12 @@
 <div class="col-md-3">
 <div class="toc">
 <ul>
-<li><a href="#syntax-1">Syntax 1: STATA Color Names</a>
+<li><a href="#syntax-1">Syntax 1: Color Names</a>
 </li>
-<li><a href="#syntax-2">Syntax 2: Viewing multiple palettes</a>
+
+<li><a href="#syntax-2">Syntax 2: Graph </a>
 </li>
-<li><a href="#colorcheck">Analyzing color palettes</a>
-</li>
+
 <li><a href="#retrieving">Retrieving palette elements</a>
 <ul>
 <li><a href="#r-returns">Retrieving colors from <code>r()</code></a>
@@ -166,21 +166,7 @@
 <li><a href="#stylefiles">Making colors permanently available</a>
 </li>
 </ul>
-</li>
-<li><a href="#immediate-palettes">Immediate palettes</a>
-<ul>
-<li><a href="#named-colors">Named colors</a>
-</li>
-<li><a href="#colorcodes">Color codes</a>
-</li>
-<li><a href="#intensity">Color intensity gradients</a>
-</li>
-<li><a href="#ipolate">Color interpolation</a>
-</li>
-</ul>
-</li>
-<li><a href="#custom-palettes">Custom palettes</a>
-</li>
+<li><a href="#dataset">Data in use</a></li>  
 </ul>
 </div>
 </div>
@@ -195,19 +181,18 @@
 <pre id="stlog-1" class="stlog"><samp><span class="stinp">. colorpalette s1</span></samp></pre>
 
 <div class="grstyle-img">
-<a href="getting-started/1.pdf" title="view PDF" type="application/pdf"><img alt="getting-started/1.svg" src="getting-started/1.svg"/></a>
+<a href="stata/colors1.pdf" title="view PDF" type="application/pdf"><img alt="stata/colors1.svg" src="stata/colors1.svg"/></a>
 </div>
 
 <pre id="stlog-2" class="stlog"><samp><span class="stinp">. colorpalette lin fruits</span></samp></pre>
 
 <div class="grstyle-img">
-<a href="getting-started/1.pdf" title="view PDF" type="application/pdf"><img alt="getting-started/1.svg" src="getting-started/1.svg"/></a>
+<a href="stata/colorlin.pdf" title="view PDF" type="application/pdf"><img alt="stata/colorlin.svg" src="stata/colorlin.svg"/></a>
 </div>
 
 <p>Instead of using a named palette you can provide a custom palette by specifying a list of colorstyles (named colors or, e.g., RBG colors specified as "# # #"). </p>
 
-<pre id="stlog-2" class="stlog"><samp><span class="stinp">
-. colorpalette blue bluishgray brown cranberry cyan dimgray dkgreen dknavy  ///
+<pre id="stlog-2" class="stlog"><samp><span class="stinp">. colorpalette blue bluishgray brown cranberry cyan dimgray dkgreen dknavy  ///
 >     dkorange eggshell emerald forest_green gold gray green khaki lavender ///
 >     lime ltblue ltbluishgray ltkhaki magenta maroon midblue midgreen mint ///
 >     navy olive olive_teal orange orange_red pink purple red sand sandb    ///
@@ -216,7 +201,7 @@
 </span></samp></pre>
 
 <div class="grstyle-img">
-<a href="getting-started/1.pdf" title="view PDF" type="application/pdf"><img alt="getting-started/1.svg" src="getting-started/1.svg"/></a>
+<a href="stata/namedcolors.pdf" title="view PDF" type="application/pdf"><img alt="stata/namedcolors.svg" src="stata/namedcolors.svg"/></a>
 </div>
 
 
