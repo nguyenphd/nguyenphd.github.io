@@ -175,8 +175,7 @@
   <!-- Main text -->
 <div class="col-md-9">
 
-<h3 id="syntax-1">Syntax 1: STATA Color Names</h3>
-<p>To display a single palette, type the palette command followed by the name of the palette.</p>
+<h3 id="syntax-1">Color Names</h3>
 
 <pre id="stlog-1" class="stlog"><samp><span class="stinp">. colorpalette s1</span></samp></pre>
 <div class="grstyle-img"><img alt="stata/colors1.png" src="stata/colors1.png"/></div>
@@ -184,9 +183,7 @@
 <pre id="stlog-2" class="stlog"><samp><span class="stinp">. colorpalette lin fruits</span></samp></pre>
 <div class="grstyle-img"><img alt="stata/colorlin.png" src="stata/colorlin.png"/></div>
 
-<p>Instead of using a named palette you can provide a custom palette by specifying a list of colorstyles (named colors or, e.g., RBG colors specified as "# # #"). </p>
-
-<pre id="stlog-2" class="stlog"><samp><span class="stinp">. colorpalette blue bluishgray brown cranberry cyan dimgray dkgreen dknavy  ///
+<pre id="stlog-3" class="stlog"><samp><span class="stinp">. colorpalette blue bluishgray brown cranberry cyan dimgray dkgreen dknavy  ///
 >     dkorange eggshell emerald forest_green gold gray green khaki lavender ///
 >     lime ltblue ltbluishgray ltkhaki magenta maroon midblue midgreen mint ///
 >     navy olive olive_teal orange orange_red pink purple red sand sandb    ///
@@ -194,6 +191,13 @@
 >     erose, title(Named Stata colors)
 </span></samp></pre>
 <div class="grstyle-img"><img alt="stata/colornamed.png" src="stata/colornamed.png"/></div>
+
+<pre id="stlog-3" class="stlog"><samp><span class="stinp">. colorpalette #bd1e24 #e97600 #f6c700 #007256 #0067a7 #964f8e ///
+>     "HCL 0 100 70" "HCL 120 100 70" "HCL 240 100 70" ///
+>     SlateBlue PaleVioletRed LightSeaGreen SandyBrown w3-purple w3-lime w3-deep-orange ///
+>     , title(Some other colors)
+</span></samp></pre>
+<div class="grstyle-img"><img alt="stata/othercolors.png" src="stata/othercolors.png"/></div>
 
 
 
