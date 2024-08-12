@@ -142,8 +142,8 @@
 
 
 <div class="page-header">
-<h1>
-          All about STATA<small> &nbsp;–&nbsp; under development </small></h1>
+<h1></h1>
+<h1>All About STATA<small> &nbsp;–&nbsp; under development </small></h1>
 </div>
 
 <div class="row">
@@ -194,12 +194,12 @@
 <h3 id="basic">Some basic commands</h3>
 
 <p>To generate variable, type:</p>
-<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    gen var1=n ///
-.    gen var1=n if var2=="" ///
-.    gen var1=n if inlist(var2, "", "", "") /// 
-.    gen var1=1+9*[[var2-var3]/[var4-var5]]  ///
-.    bysort var1: gen rank=_n ///
-.    egen var1 = min(var2), by(var3) ///
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    gen var1=n 
+.    gen var1=n if var2=="" 
+.    gen var1=n if inlist(var2, "", "", "") 
+.    gen var1=1+9*[[var2-var3]/[var4-var5]]  
+.    bysort var1: gen rank=_n
+.    egen var1 = min(var2), by(var3) 
 .    egen var1 = max(var2), by(var3)
 </span></samp></pre>
 
@@ -209,21 +209,54 @@
 </span></samp></pre>
 
 <p>To sort in ascending or descending order, type:</p>  
-<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    gsort var1 ///
-.    gsort -var1 ///
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    gsort var1 
+.    gsort -var1 
 .    gsort var1 -var2
 </span></samp></pre>
 
+<h3 id="graph">Graphs</h3>
+
+<p>Example 1:</p> 
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    graph bar unweighted if pro=="cantho", ///
+>    over(year) blabel(bar, format(%9,2f) orientation(vertical) position(inside) color(black)) ///
+>    title(`"{bf:KẾT QUẢ ĐÁNH GIÁ PAPI GIAI ĐOẠN 2014-2023}"' `"————————————————"' `"{bf: THÀNH PHỐ CẦN THƠ}"') ///
+>    ytitle("") bargap(5) bar(1, fcolor(226 191 217) lcolor(black)) text(50 4 "#55", size(small)) ///
+>    text(50 14 "#2", size(small)) text(50 24 "#1", size(small)) text(50 34 "#11", size(small)) ///
+>    text(50 45 "#8", size(small)) text(50 55 "#8", size(small)) text(50 65 "#29", size(small)) ///
+>    text(50 75 "#42", size(small)) text(50 85 "#55", size(small)) text(50 95 "#53", size(small))
+</span></samp></pre>
+<div class="grstyle-img"><img alt="stata/ay-cantho.png" src="stata/ay-cantho.png" width="400" height="400"  /></div>
+
+<p>Example 2:</p>
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    graph hbar unweighted if year==2023 & rank<=10, ///
+>    over(id, sort(1) descending) blabel(bar, format(%9,2f)) ysc(r(. 5)) ylabel(#5, nogrid labsize(*0.6)) ///
+>    ysize(6) bar(1, color(cranberry)) title("{bf:TOP 10 - PAPI NĂM 2023}") ///
+>    ytitle("") graphregion(margin(l+5 r+5))
+</span></samp></pre>
+<div class="grstyle-img"><img alt="stata/papi2023.png" src="stata/papi2023.png" width="400" height="400"  /></div>
+
+<p>Example 3:</p>
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    graph bar dim1 dim11 dim12 dim13 dim14 ///
+>    if pro=="cantho", over(year) blabel(bar, format(%9,2f) orientation(vertical) size(vsmall) pos(outside) color(black)) ///
+>    ytitle("Điểm đánh giá của các" "Nội dung thành phần thuộc Trục nội dung 1", size(small)) ///
+>    title("{bf:PAPI CẦN THƠ — TRỤC NỘI DUNG 1}") subtitle("Tham gia của người dân ở cấp cơ sở", margin(l+0 r+0 b+2 t+0)) ///
+>    graphregion(margin(l+5 r+5)) bargap(10) ysize(3) bar(1, fcolor(cranberry) lcolor(black)) ///
+>    bar(2, fcolor(128 128 255) lcolor(black)) bar(3, fcolor(128 197 222) lcolor(black)) ///
+>    bar(4, fcolor(192 128 192) lcolor(black)) bar(5, fcolor(255 128 128) lcolor(black)) ///
+>    legend(label(1 "Điểm tổng của Trục đánh giá 1") label(2 "Tri thức công dân") label(3 "Cơ hội tham gia") ///
+>    label(4 "Chất lượng bầu cử") label(5 "Đóng góp tự nguyện") size(vsmall))
+</span></samp></pre>
+<div class="grstyle-img"><img alt="stata/ct-subdim1.png" src="stata/ct-subdim1.png" width="400" height="400"  /></div>
   
-<h3 id="color">Color Names</h3>
+<h3 id="color">Color names</h3>
 
 <pre id="stlog-1" class="stlog"><samp><span class="stinp">.    colorpalette s1</span></samp></pre>
 <div class="grstyle-img"><img alt="stata/colors1.png" src="stata/colors1.png" width="400" height="400"  /></div>
 
-<pre id="stlog-2" class="stlog"><samp><span class="stinp">.    colorpalette lin fruits</span></samp></pre>
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    colorpalette lin fruits</span></samp></pre>
 <div class="grstyle-img"><img alt="stata/colorlin.png" src="stata/colorlin.png" width="400" height="400" /></div>
 
-<pre id="stlog-3" class="stlog"><samp><span class="stinp">.    colorpalette blue bluishgray brown cranberry cyan dimgray dkgreen dknavy  ///
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    colorpalette blue bluishgray brown cranberry cyan dimgray dkgreen dknavy  ///
 >    dkorange eggshell emerald forest_green gold gray green khaki lavender ///
 >    lime ltblue ltbluishgray ltkhaki magenta maroon midblue midgreen mint ///
 >    navy olive olive_teal orange orange_red pink purple red sand sandb    ///
@@ -232,7 +265,7 @@
 </span></samp></pre>
 <div class="grstyle-img"><img alt="stata/colornamed.png" src="stata/colornamed.png" width="500" height="500" /></div>
 
-<pre id="stlog-3" class="stlog"><samp><span class="stinp">.    colorpalette #bd1e24 #e97600 #f6c700 #007256 #0067a7 #964f8e ///
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    colorpalette #bd1e24 #e97600 #f6c700 #007256 #0067a7 #964f8e ///
 >    "HCL 0 100 70" "HCL 120 100 70" "HCL 240 100 70" ///
 >    SlateBlue PaleVioletRed LightSeaGreen SandyBrown  ///
 >    w3-purple w3-lime w3-deep-orange, title(Some other colors)
