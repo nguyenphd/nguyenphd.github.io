@@ -151,13 +151,13 @@
 <div class="col-md-3">
 <div class="toc">
 <ul>
-<li><a href="#color">Color Names</a>
-</li>
-
-<li><a href="#graph">Graphs </a>
-</li>
 
 <li><a href="#data">Data in use</a></li>  
+<li><a href="#graph">Graphs </a></li>
+
+<li><a href="#color">Color Names</a></li>
+
+
 
 </ul>
 </div>
@@ -167,6 +167,30 @@
   <!-- Main text -->
 <div class="col-md-9">
 
+<h3 id="data">Data set</h3>
+ <p>Data used in this section is extracted from Vietnam PAPI (Public Administratation and Performance Index) website (<a href="https://papi.org.vn/du-lieu-papi/">https://papi.org.vn/</a>) in 2014-2023 period.</p>
+ <p>Available here: <a href="stata/papi1423.dta">PAPI-2014to2023</a></p>
+
+<h3 id="graph">Graphs</h3>
+
+<p>To install the grstyle package, type:</p>
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    ssc install grstyle, replace</span></samp></pre>
+
+<p>To install the palettes package, type:</p>
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    ssc install palettes, replace</span></samp></pre>  
+
+<p>To customize the overall look of graph, type:</p>
+<pre id="stlog-1" class="stlog"><samp><span class="stinp">.    grstyle init ///
+>    grstyle color background white ///
+>    grstyle color major_grid dimgray /// 
+>    grstyle linewidth major_grid thin ///
+>    grstyle yesno draw_major_hgrid yes ///
+>    grstyle yesno grid_draw_min yes ///
+>    grstyle yesno grid_draw_max yes ///
+>    grstyle anglestyle vertical_tick horizontal ///
+</span></samp></pre>
+  
+  
 <h3 id="color">Color Names</h3>
 
 <pre id="stlog-1" class="stlog"><samp><span class="stinp">. colorpalette s1</span></samp></pre>
@@ -192,22 +216,9 @@
 <div class="grstyle-img"><img alt="stata/othercolors.png" src="stata/othercolors.png" width="450" height="450" /></div>
 
 
-<h3 id="graph">Graphs</h3>
 
-<p>  
-grstyle init
-grstyle color background white
-grstyle color major_grid dimgray
-grstyle linewidth major_grid thin
-grstyle yesno draw_major_hgrid yes
-grstyle yesno grid_draw_min yes
-grstyle yesno grid_draw_max yes
-grstyle anglestyle vertical_tick horizontal
-  </p>
 
-<h3 id="data">Color Names</h3>
- <p>Data used in this section was extracted from Vietnam's PAPI (Public Administratation and Performance Index) website in period 2014-2023 </p>
- <p>Download from <a href="stata/papi1423.dta">PAPI-2014to2023</a></p>
+
     
     
     
