@@ -151,22 +151,14 @@
 <div class="col-md-3">
 <div class="toc">
 <ul>
-<li><a href="#syntax-1">Syntax 1: Color Names</a>
+<li><a href="#color">Color Names</a>
 </li>
 
-<li><a href="#syntax-2">Syntax 2: Graph </a>
+<li><a href="#graph">Graphs </a>
 </li>
 
-<li><a href="#retrieving">Retrieving palette elements</a>
-<ul>
-<li><a href="#r-returns">Retrieving colors from <code>r()</code></a>
-</li>
-<li><a href="#macros">Storing colors as globals or locals</a>
-</li>
-<li><a href="#stylefiles">Making colors permanently available</a>
-</li>
-</ul>
-<li><a href="#dataset">Data in use</a></li>  
+<li><a href="#data">Data in use</a></li>  
+
 </ul>
 </div>
 </div>
@@ -175,7 +167,7 @@
   <!-- Main text -->
 <div class="col-md-9">
 
-<h3 id="syntax-1">Color Names</h3>
+<h3 id="color">Color Names</h3>
 
 <pre id="stlog-1" class="stlog"><samp><span class="stinp">. colorpalette s1</span></samp></pre>
 <div class="grstyle-img"><img alt="stata/colors1.png" src="stata/colors1.png" width="400" height="400"  /></div>
@@ -200,12 +192,22 @@
 <div class="grstyle-img"><img alt="stata/othercolors.png" src="stata/othercolors.png" width="450" height="450" /></div>
 
 
+<h3 id="graph">Graphs</h3>
 
+<p>  
+grstyle init
+grstyle color background white
+grstyle color major_grid dimgray
+grstyle linewidth major_grid thin
+grstyle yesno draw_major_hgrid yes
+grstyle yesno grid_draw_min yes
+grstyle yesno grid_draw_max yes
+grstyle anglestyle vertical_tick horizontal
+  </p>
 
-  
-  
- 
-
+<h3 id="data">Color Names</h3>
+ <p>Data used in this section was extracted from Vietnam's PAPI (Public Administratation and Performance Index) website in period 2014-2023 </p>
+ <p>Download from <a href="stata/papi1423.dta">PAPI-2014to2023</a></p>
     
     
     
