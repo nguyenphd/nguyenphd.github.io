@@ -303,8 +303,9 @@ footer {
 
     height:42px;
 
-    width:auto;
+    max-width:120px;
 
     object-fit:contain;
 
 }
+
