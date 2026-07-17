@@ -278,3 +278,15 @@ footer {
     background: #fff;
   }
 }
+
+.edu-logo{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+}
+
+.edu-logo img{
+    height:22px;
+    width:auto;
+    vertical-align:middle;
+}
