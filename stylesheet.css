@@ -1,0 +1,280 @@
+/* ---------- Base ---------- */
+:root {
+  --text: #222;
+  --muted: #5d6470;
+  --link: #1666a8;
+  --border: #e6e8eb;
+  --highlight: #fffbd6;
+  --background: #fff;
+  --card: #fafafa;
+  --max-width: 920px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.page {
+  width: min(calc(100% - 32px), var(--max-width));
+  margin: 0 auto;
+  padding: 36px 0 24px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(220px, 0.8fr);
+  gap: 38px;
+  align-items: center;
+  padding: 18px 16px 30px;
+}
+
+.hero-copy h1 {
+  margin: 0 0 18px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.nickname {
+  color: var(--muted);
+  font-size: 0.65em;
+  font-weight: 400;
+}
+
+.hero-copy p {
+  margin: 0 0 13px;
+  text-align: justify;
+}
+
+.profile-links {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.profile-links span,
+.item-links span {
+  margin: 0 7px;
+  color: #999;
+}
+
+.hero-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo img {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ---------- Sections ---------- */
+.content-section {
+  padding: 18px 16px;
+}
+
+.content-section h2 {
+  margin: 0 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.65rem;
+}
+
+.news-list {
+  margin: 0;
+  padding-left: 21px;
+}
+
+.news-list li {
+  margin-bottom: 7px;
+}
+
+/* ---------- Research items ---------- */
+.research-item {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  gap: 22px;
+  align-items: center;
+  margin: 0 0 10px;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.research-item.featured {
+  background: var(--highlight);
+}
+
+.research-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: white;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.research-details h3 {
+  margin: 0 0 5px;
+  color: var(--link);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.authors,
+.venue,
+.research-details p {
+  margin: 3px 0;
+}
+
+.venue {
+  font-weight: 700;
+}
+
+.item-links {
+  margin-top: 7px !important;
+}
+
+/* ---------- Supporting sections ---------- */
+.two-column-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+}
+
+.text-card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+}
+
+.text-card p {
+  margin: 0 0 14px;
+}
+
+.text-card p:last-child {
+  margin-bottom: 0;
+}
+
+.misc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.misc-grid > div {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.misc-grid h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.misc-grid p {
+  margin: 0;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 24px;
+  padding: 22px 16px 10px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.88rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .page {
+    width: min(calc(100% - 20px), var(--max-width));
+    padding-top: 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .hero-photo {
+    grid-row: 1;
+  }
+
+  .hero-photo img {
+    max-width: 210px;
+  }
+
+  .hero-copy h1 {
+    margin-top: 4px;
+  }
+
+  .hero-copy p {
+    text-align: left;
+  }
+
+  .research-item {
+    grid-template-columns: 1fr;
+  }
+
+  .research-image img {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .two-column-section,
+  .misc-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e8e8e8;
+    --muted: #b6bdc7;
+    --link: #7cbcff;
+    --border: #34383f;
+    --highlight: #34331d;
+    --background: #15171a;
+    --card: #1d2024;
+  }
+
+  .research-image img {
+    background: #fff;
+  }
+}
