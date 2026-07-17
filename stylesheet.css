@@ -279,14 +279,32 @@ footer {
   }
 }
 
-.edu-logo{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
+.education-item{
+    margin-bottom:35px;
 }
 
-.edu-logo img{
-    height:22px;
+.education-item h3{
+    margin-bottom:10px;
+}
+
+.edu-line{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:1.1rem;
+
+}
+
+.edu-line img{
+
+    height:42px;
+
     width:auto;
-    vertical-align:middle;
+
+    object-fit:contain;
+
 }
