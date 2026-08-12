@@ -309,3 +309,29 @@ footer {
 
 }
 
+.top-cv-link {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+
+  transition: border-color 0.2s ease;
+}
+
+.top-cv-link:hover {
+  border-bottom-color: #111;
+}
+
+@media (max-width: 700px) {
+  .top-cv-link {
+    top: 20px;
+    right: 22px;
+  }
+}
