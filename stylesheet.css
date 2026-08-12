@@ -310,3 +310,45 @@ footer {
 }
 
 }
+
+.cv-education-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.cv-education-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.cv-education-logo {
+  flex: 0 0 180px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.cv-education-logo img {
+  width: 100%;
+  max-width: 180px;
+  height: 90px;
+  object-fit: contain;
+  object-position: top right;
+}
+
+@media (max-width: 700px) {
+  .cv-education-item {
+    gap: 20px;
+  }
+
+  .cv-education-logo {
+    flex-basis: 100px;
+  }
+
+  .cv-education-logo img {
+    max-width: 100px;
+    height: 60px;
+  }
+}
