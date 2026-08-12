@@ -352,3 +352,77 @@ footer {
     height: 60px;
   }
 }
+
+/* CV Header */
+
+.cv-header {
+  text-align: center;
+  padding: 45px 0 35px;
+}
+
+.cv-header h1 {
+  margin: 0 0 18px;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.cv-header .nickname {
+  font-size: 0.55em;
+  font-weight: 500;
+  color: #5f6673;
+}
+
+.cv-subtitle {
+  margin: 0 0 28px;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0.1px;
+}
+
+.cv-header .profile-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 0;
+  margin: 0;
+
+  font-size: 1rem;
+}
+
+.cv-header .profile-links a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.cv-header .profile-links span {
+  margin: 0 14px;
+  color: #aaa;
+  font-weight: 300;
+}
+
+@media (max-width: 700px) {
+  .cv-header {
+    padding: 30px 0 25px;
+  }
+
+  .cv-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .cv-subtitle {
+    font-size: 1rem;
+  }
+
+  .cv-header .profile-links {
+    font-size: 0.95rem;
+  }
+
+  .cv-header .profile-links span {
+    margin: 0 8px;
+  }
+}
