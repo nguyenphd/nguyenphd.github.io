@@ -1,0 +1,544 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duy P. Nguyen — Environmental Economist</title>
+    <meta name="description" content="Duy Nguyen. Environmental Economist">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --text-muted: #6b6b6b;
+            --accent: #ba0c2f; /* OSU scarlet */
+            --accent-hover: #9a0a27;
+            --bg: #fafaf8;
+            --bg-card: #ffffff;
+            --border: #e2e0dc;
+            --border-light: #f0eeea;
+            --serif: 'Source Serif 4', Georgia, serif;
+            --sans: 'Source Sans 3', -apple-system, sans-serif;
+            --max-width: 780px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--sans);
+            color: var(--text-primary);
+            background: var(--bg);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- Nav ---- */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250, 250, 248, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+        }
+        nav .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0.85rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .nav-name {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        nav .nav-links {
+            display: flex;
+            gap: 1.75rem;
+        }
+        nav .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            transition: color 0.2s;
+        }
+        nav .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* ---- Main ---- */
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ---- Hero / About ---- */
+        .hero {
+            padding: 3rem 0 2.5rem;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+        .hero-photo {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 6px;
+            filter: grayscale(0%);
+        }
+        .hero-text h1 {
+            font-family: var(--serif);
+            font-size: 1.85rem;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 0.35rem;
+        }
+        .hero-text .subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        .hero-text .bio {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin-bottom: 1rem;
+        }
+        .hero-text .fields {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .hero-text .fields strong {
+            color: var(--text-secondary);
+        }
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.25rem;
+            font-size: 0.9rem;
+        }
+        .contact-links a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-links a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        /* ---- Sections ---- */
+        section {
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+        }
+        section h2 {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        /* ---- Research ---- */
+        .paper {
+            margin-bottom: 1.75rem;
+        }
+        .paper-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: rgba(186, 12, 47, 0.07);
+            padding: 0.15rem 0.5rem;
+            border-radius: 3px;
+            margin-bottom: 0.4rem;
+        }
+        .paper h3 {
+            font-family: var(--serif);
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 0.3rem;
+        }
+        .paper .paper-meta {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        .paper .paper-meta em {
+            color: var(--text-secondary);
+        }
+        .paper .abstract {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+        .paper .abstract-toggle {
+            font-size: 0.85rem;
+            color: var(--accent);
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: var(--sans);
+            font-weight: 500;
+            padding: 0;
+            transition: color 0.2s;
+        }
+        .paper .abstract-toggle:hover {
+            color: var(--accent-hover);
+        }
+        .abstract-content {
+            display: none;
+            margin-top: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: var(--bg);
+            border-left: 2px solid var(--border);
+            border-radius: 0 4px 4px 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .abstract-content.open {
+            display: block;
+        }
+        .paper-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.4rem;
+            font-size: 0.85rem;
+        }
+        .paper-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .paper-links a:hover {
+            text-decoration: underline;
+        }
+
+        .pub-list {
+            list-style: none;
+        }
+        .pub-list li {
+            margin-bottom: 1rem;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: var(--text-secondary);
+        }
+        .pub-list li strong {
+            color: var(--text-primary);
+        }
+        .pub-list li em {
+            color: var(--text-secondary);
+        }
+
+        /* ---- Awards ---- */
+        .award-list {
+            list-style: none;
+        }
+        .award-list li {
+            margin-bottom: 0.75rem;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            padding-left: 1rem;
+            border-left: 2px solid var(--accent);
+        }
+        .award-list li strong {
+            color: var(--text-primary);
+        }
+
+        /* ---- Teaching ---- */
+        .teaching-item {
+            margin-bottom: 1.25rem;
+        }
+        .teaching-item h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.15rem;
+        }
+        .teaching-item .teaching-meta {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+        .teaching-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        .award-note {
+            margin-top: 1.25rem;
+            padding: 0.75rem 1rem;
+            background: rgba(186, 12, 47, 0.04);
+            border-left: 2px solid var(--accent);
+            border-radius: 0 4px 4px 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* ---- CV ---- */
+        .cv-section {
+            text-align: center;
+            padding: 2.5rem 0;
+        }
+        .cv-section p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        .cv-button {
+            display: inline-block;
+            padding: 0.65rem 1.75rem;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .cv-button:hover {
+            background: var(--accent-hover);
+        }
+
+        /* ---- Footer ---- */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 640px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            .hero-photo {
+                margin: 0 auto;
+                width: 160px;
+                height: 200px;
+            }
+            .contact-links {
+                justify-content: center;
+            }
+            nav .nav-name {
+                font-size: 0.95rem;
+            }
+            nav .nav-links {
+                gap: 1rem;
+            }
+            nav .nav-links a {
+                font-size: 0.82rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="#" class="nav-name">D. Eric Belleville, Jr.</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#awards">Awards</a>
+            <a href="#cv">CV</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+<!-- ============ ABOUT ============ -->
+<section class="hero" id="about">
+    <img src="https://nguyenphd.github.io/img/DSCF0709.jpeg" alt="Duy P. Nguyen" class="hero-photo">
+    <div class="hero-text">
+        <h1>Duy P. Nguyen</h1>
+        <div class="subtitle">
+            M.Sc. Global Environmental Economics, University of Galway (Ireland).<br>
+            B.Sc. Natural Resource Economics, Can Tho University (Vietnam)
+        </div>
+        <p class="bio">
+            I am a PhD candidate in the Department of Agricultural, Environmental, and Development Economics (AEDE) at The Ohio State University, advised by <a href="https://aede.osu.edu/our-people/brian-roe" style="color: var(--accent);">Brian Roe</a>. My research studies how environmental buyback and retirement programs can be designed to change the behavior of producers and resource owners, using structural and spatial methods alongside laboratory experiments. I work across conservation contracts, land retirement, and common-pool resource buybacks, focusing on how spatial spillovers shape participation and cost-effectiveness.
+        </p>
+        <p class="bio">
+            I am on the <strong>2026–27 job market</strong>.
+        </p>
+        <p class="fields">
+            <strong>Fields:</strong> Environmental &amp; Resource Economics · Mechanism Design · Experimental Economics · Spatial Econometrics
+        </p>
+        <div class="contact-links">
+            <a href="mailto:belleville.11@osu.edu">belleville.11@osu.edu</a>
+            <a href="https://scholar.google.com/citations?user=PhtuzPYAAAAJ">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/douglas-belleville-7583a93b1/">LinkedIn</a>
+            <!-- To show a GitHub link, uncomment the next line and set your username:
+            <a href="https://github.com/ericbelle96">GitHub</a> -->
+        </div>
+    </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section id="research">
+    <h2>Research</h2>
+
+    <!-- JMP -->
+    <div class="paper">
+        <div class="paper-label">Job Market Paper</div>
+        <h3>How Spillovers Erode Participation in Conservation Buybacks: Evidence from the Texas Inshore Shrimp Fishery</h3>
+        <p class="abstract">
+            Buyback programs meant to reduce overcapitalization can undercut their own progress: as capacity is removed, the agents who remain gain a less crowded resource and grow less willing to exit. Using the Texas inshore shrimp license buyback over 26 years, I estimate a two-stage structural model and find that for every thirteen active bidders, roughly one holds out (about 7.6%) as stock recovery makes staying more valuable. Because about two-thirds of retired licenses were already inactive, targeting matters: at the same budget, restricting purchases to active licenses would have retired 123 more trawl-days per license, and targeting San Antonio bay alone would have retired 306 more.
+        </p>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">+ Full abstract</button>
+        <div class="abstract-content">
+            Buyback programs are widely used to reduce overcapitalization and generate social benefits in settings such as land retirement, groundwater conservation, and fisheries. Yet evaluations often stop at program boundaries, even though removals can generate spillovers: displaced activity may move elsewhere, while those who remain benefit from a replenished resource. I study how these gains feed back into buyback program participation. As capacity is removed, the continuation value of remaining participants rises, creating an incentive to hold out rather than exit. Successful removals can therefore weaken the program participation required for further success.
+            <br><br>
+            I quantify this feedback-loop using the Texas Parks and Wildlife Department's 26-year inshore shrimp license buyback as a testbed. I estimate a two-stage structural model of vessels' spatial fishing choices and license-retirement decisions, then use it to simulate continuation values and reconstruct harvest and auction activity when vessel-level data are unavailable. I find that for every thirteen active license-holders who bid, roughly one who would otherwise have participated holds out as stock recovery makes staying more valuable. Program effectiveness is further constrained by two margins: approximately two-thirds of retired licenses were already inactive, and surviving vessels replace more of the retired effort in denser bay systems. At the same budget, restricting purchases to active licenses would have retired 123 more trawl-days per license, while targeting San Antonio bay alone would have retired 306 more. Together, the results show that conservation buybacks can undermine participation and additionality through the benefits they create for those who remain.
+        </div>
+             <div class="paper-links">
+            <a href="Job_Market_Paper.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
+            <a href="Job_Market_Paper.pdf" download>Download</a>
+        </div>
+    </div>
+
+    <!-- Working Papers -->
+    <div class="paper">
+        <div class="paper-label">Revise &amp; Resubmit</div>
+        <h3>Strategic Delay, Signaling, and Risk Preferences in Agglomeration Bonus Mechanisms</h3>
+        <p class="paper-meta"><em>Environmental and Resource Economics</em>, revise &amp; resubmit</p>
+        <button class="abstract-toggle" onclick="toggleAbstract(this)">+ Abstract</button>
+        <div class="abstract-content">
+            Many environmental and resource policies rely on group-based incentives that require individuals to make binding participation decisions with payoffs that depend on the actions of others. A prominent example is agglomeration bonus schemes, which reward participants more as neighboring agents also adopt. In such settings, uncertainty about future coordination creates incentives to delay commitment, particularly when participation is irreversible and outcomes are risky. This paper studies how irreversibility, peer information, and risk preferences jointly shape the timing of adoption in coordination-based incentive schemes.
+            <br><br>
+            I test how these mechanisms interact in a laboratory experiment in which participants decide whether to make an irreversible commitment to a group-dependent payoff. The design exogenously varies the visibility of peers' past choices and independently elicits risk preferences. Time-to-adoption estimates show that observed peer adoption substantially accelerates uptake: each additional accumulated observed adoption shortens time to adoption by 0.5–1.7 percent. Risk preferences significantly delay adoption, but only under a higher-stakes payoff structure. A simulation combining these estimates suggests that expanding peer visibility yields program benefits equivalent to roughly 0.2 additional adopters per participant at empirically documented risk aversion levels. Together, the results highlight the importance of information design for agglomeration bonus schemes, and suggest that peer visibility yields the greatest returns in populations facing higher-stakes, irreversible participation decisions.
+        </div>
+    </div>
+
+    <!-- Works in Progress -->
+    <div class="paper">
+        <div class="paper-label">Work in Progress</div>
+        <h3>Endogenous Entry and Bid Behavior in Common-Pool Resource Buyback Auctions</h3>
+        <p class="paper-meta"><em>In progress</em></p>
+        <p class="abstract">
+            Building on the structural framework of my job market paper, this project models bidding and endogenous entry directly, drawing on the auction-theoretic literature on entry into procurement and buyback mechanisms. The goal is a mechanism-design treatment of how program rules shape who bids, how they bid, and the resulting efficiency of capacity retirement.
+        </p>
+    </div>
+
+    <!-- Publications -->
+    <h2 style="margin-top: 1.5rem;">Publications</h2>
+    <ol class="pub-list" reversed>
+        <li>
+            <strong>Belleville Jr, D. E.</strong>, Jolley, G. J., Bone, C., &amp; Gomez, D. (2025). "Universal Basic Income in Appalachia: A Strategy for Clean Energy Transition?" <em>Basic Income Studies</em>, 20(2), 151–166.
+        </li>
+        <li>
+            Pham, T., Khalaf, C., Jolley, G. J., &amp; <strong>Belleville Jr, D. E.</strong> (2024). "Hollowing Out of Middle-Pay Jobs in Ohio: An Exploratory Analysis." <em>American Journal of Economics and Sociology</em>, 83(2), 427–443.
+        </li>
+        <li>
+            Michaud, G., Riley, J., Jolley, G. J., &amp; <strong>Belleville Jr, D. E.</strong> (2022). "Industry Survey of Wood Waste Markets in Ohio." <em>International Wood Products Journal</em>, 13(2), 91–98.
+        </li>
+        <li>
+            <strong>Belleville Jr, D. E.</strong> &amp; Jolley, G. J. (2022). "Estimating Cultural Heritage Sites Effect on Food and Accommodations with Synthetic Controls." <em>Annals of Tourism Research Empirical Insights</em>, 3(1), 100045.
+        </li>
+        <li>
+            Jolley, G. J. &amp; <strong>Belleville Jr, D. E.</strong> (2021). "Economic Impact of Ohio Foundation of Independent Colleges (OFIC)." <em>The Ohio Foundation of Independent Colleges</em>, Ohio.
+        </li>
+        <li>
+            Jolley, G. J., Khalaf, C., Michaud, G. L., &amp; <strong>Belleville Jr, D. E.</strong> (2020). "The Economic Contribution of Logging, Forestry, Pulp &amp; Paper Mills, and Paper Products: A 50-State Analysis." <em>Forest Policy and Economics</em>, 115, 102140.
+        </li>
+        <li>
+            <strong>Belleville Jr, D. E.</strong>, Cebula, R. J., Jolley, G. J., &amp; Bone, C. (2020). "COVID-19-Related Jock Tax Revenue Losses in US States." <em>Regional Studies, Regional Science</em>, 7(1), 428–430.
+        </li>
+    </ol>
+</section>
+
+<!-- ============ TEACHING ============ -->
+<section id="teaching">
+    <h2>Teaching</h2>
+
+    <div class="teaching-item">
+        <h3>AEDE 2005: Data Analysis for Agribusiness and Applied Economics</h3>
+        <div class="teaching-meta">Teaching Assistant · The Ohio State University · Spring 2026</div>
+        <p>Designed original exam materials; facilitated group project-focused office hours; led lab sessions on applied data analysis methods.</p>
+    </div>
+
+    <div class="teaching-item">
+        <h3>AEDE 4002: Analytics for Agribusiness and Applied Economics</h3>
+        <div class="teaching-meta">Teaching Assistant · The Ohio State University · Fall 2025</div>
+        <p>Led weekly lab sessions; developed interactive materials and Excel-based assignments.</p>
+    </div>
+
+    <div class="teaching-item">
+        <h3>AEDE 4330: Sustainable Economy: Concepts and Methods</h3>
+        <div class="teaching-meta">Teaching Assistant · The Ohio State University · 2023–2025</div>
+        <p>Assisted in course management; coordinated with faculty on assessment design; designed and graded assignments emphasizing empirical applications of sustainability metrics.</p>
+    </div>
+</section>
+
+<!-- ============ AWARDS ============ -->
+<section id="awards">
+    <h2>Awards &amp; Honors</h2>
+    <ul class="award-list">
+        <li>
+            <strong>Farm Foundation Agricultural Scholars Program</strong> (USDA ERS &amp; Farm Foundation), 2026
+        </li>
+        <li>
+            <strong>Bernie Erven Graduate Teaching Award</strong>, AEDE, The Ohio State University, 2026
+        </li>
+        <li>
+            <strong>George and Florence McGhee Memorial Scholarship</strong>, 2026
+        </li>
+    </ul>
+</section>
+
+<!-- ============ CV ============ -->
+<section id="cv" class="cv-section">
+    <h2>Curriculum Vitae</h2>
+    <p>Download my full CV for additional details on research, teaching, and professional experience.</p>
+    <a href="CV.pdf" class="cv-button">Download CV (PDF)</a>
+</section>
+
+</main>
+
+<footer>
+    &copy; 2026 D. Eric Belleville, Jr. · Last updated August 2026
+</footer>
+
+<script>
+function toggleAbstract(btn) {
+    const content = btn.nextElementSibling;
+    content.classList.toggle('open');
+    btn.textContent = content.classList.contains('open')
+        ? '− Hide abstract'
+        : '+ ' + (btn.closest('.paper').querySelector('.paper-label')?.textContent === 'Job Market Paper' ? 'Full abstract' : 'Abstract');
+}
+</script>
+
+</body>
+</html>
